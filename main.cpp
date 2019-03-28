@@ -12,7 +12,7 @@ using namespace std;
 
 
 int perevod(int dighit){
-    int i;
+    int i = 0;
     string s;
     bool boolean;
     
@@ -44,11 +44,12 @@ int perevod(int dighit){
             }
         }
     }
-    return s[i];
+    return dighit;
 }
 
 
 int main() {
+    int n;
     int a;
     cout << "inter your number"<< endl;
     scanf("%d",&a);
@@ -70,20 +71,27 @@ int main() {
     }
     switch (b) {
         case 1:
-           return a-c;
+            n = a - c;
+           return n;
+            perevod(n);
             break;
             
        case 2:
-            return a+c;
+            n = a + c;
+            return n;
+            perevod(n);
             break;
         case 3:
-            return a*c;
+            n = a * c;
+            return n;
+            perevod(n);
             break;
         case 4:
-            return a/c;
+            n=a/c;
+            return n;
+            perevod(n);
             break;
     }
-    
     
     
     
