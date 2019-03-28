@@ -17,7 +17,7 @@ int perevod(int dighit){
     bool boolean;
     
     int b = dighit % 2;
-    if (dighit = 0){
+    if (dighit == 0){
         dighit = 12;
     }
     else if(dighit < 6){
@@ -25,8 +25,8 @@ int perevod(int dighit){
     }
     dighit = dighit * 2;
     
-    for (i>0; i<4; i++) {
-        if ( b=1) {
+    for (i=0; i<4; i++) {
+        if ( b==1) {
             s = '1' + s;
         }
         else {
@@ -35,10 +35,10 @@ int perevod(int dighit){
         }
     dighit = dighit / 2;
     boolean = true;
-    for (i>1; i<5; i++) {
+    for (i=1; i<5; i++) {
         if (s[i] = '1') {
             boolean = false;
-            if (boolean = false) {
+            if (boolean == false) {
                 s[5] = '1';
                 
             }
