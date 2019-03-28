@@ -11,7 +11,11 @@
 using namespace std;
 
 
-int perevod(int dighit,int i,string s,bool boolean){
+int perevod(int dighit){
+    int i;
+    string s;
+    bool boolean;
+    
     int b = dighit % 2;
     if (dighit = 0){
         dighit = 12;
@@ -48,15 +52,18 @@ int main() {
     int a;
     cout << "inter your number"<< endl;
     scanf("%d",&a);
+    perevod(a);
     
     int b;
     cout << "inter your sign\n";
     cout << "1=-\n2=+\n3=*\n4=/\n";
     cin  >> b;
+    perevod(b);
     
     int c ;
     cout << "inter your second number\n";
     scanf("%d",&c);
+   perevod(c);
     
     if ( b == isalpha(b)){
         cout<<"wtf";
