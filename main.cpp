@@ -11,6 +11,39 @@
 using namespace std;
 
 
+int perevod(int dighit,int i,string s,bool boolean){
+    int b = dighit % 2;
+    if (dighit = 0){
+        dighit = 12;
+    }
+    else if(dighit < 6){
+        dighit = dighit++;
+    }
+    dighit = dighit * 2;
+    
+    for (i>0; i<4; i++) {
+        if ( b=1) {
+            s = '1' + s;
+        }
+        else {
+                s = '0' + s;
+            }
+        }
+    dighit = dighit / 2;
+    boolean = true;
+    for (i>1; i<5; i++) {
+        if (s[i] = '1') {
+            boolean = false;
+            if (boolean = false) {
+                s[5] = '1';
+                
+            }
+        }
+    }
+    return s[i];
+}
+
+
 int main() {
     int a;
     cout << "inter your number"<< endl;
