@@ -12,38 +12,31 @@ using namespace std;
 
 
 int perevod(int dighit){
-    int i = 0;
-    string s;
+    int i;
+    char s[5];
     bool boolean;
     
-    int b = dighit % 2;
-    if (dighit == 0){
-        dighit = 12;
-    }
-    else if(dighit < 6){
-        dighit = dighit++;
-    }
-    dighit = dighit * 2;
+    if (dighit == 0) dighit = 12;
+    else
+        if(dighit > 6) dighit++;
     
-    for (i=0; i<4; i++) {
-        if ( b==1) {
-            s = '1' + s;
-        }
-        else {
-                s = '0' + s;
-            }
-        }
-    dighit = dighit / 2;
-    boolean = true;
-    for (i=1; i<5; i++) {
-        if (s[i] = '1') {
-            boolean = false;
-            if (boolean == false) {
-                s[5] = '1';
-                
-            }
-        }
+    dighit *= 2;
+    
+    for (i=0; i<5; ++i)
+    {
+        if (dighit % 2) s[i] = '1';
+        else s[i] = '0';
+        
+        dighit /= 2;
     }
+    
+    boolean = true;
+    
+    for (i=1; i<6; i++)
+        if (s[i] == '1') boolean = false;
+    
+    if (boolean == false) s[4] = '1';
+    cout << s <<endl ;
     return dighit;
 }
 
@@ -59,12 +52,11 @@ int main() {
     cout << "inter your sign\n";
     cout << "1=-\n2=+\n3=*\n4=/\n";
     cin  >> b;
-    perevod(b);
     
     int c ;
     cout << "inter your second number\n";
     scanf("%d",&c);
-   perevod(c);
+    perevod(c);
     
     if ( b == isalpha(b)){
         cout<<"wtf";
@@ -72,23 +64,19 @@ int main() {
     switch (b) {
         case 1:
             n = a - c;
-           return n;
             perevod(n);
             break;
             
-       case 2:
+        case 2:
             n = a + c;
-            return n;
             perevod(n);
             break;
         case 3:
             n = a * c;
-            return n;
             perevod(n);
             break;
         case 4:
             n=a/c;
-            return n;
             perevod(n);
             break;
     }
